@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include "Square.cpp"
+#include "Configuration.cpp"
 
 int main ()
 {
