@@ -9,6 +9,9 @@
 class Square
 {
 public:
+    Square(int st8, int covernumber);
+    
+private:
     int state;
     int IfCoveredNumber;
 };
