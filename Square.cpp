@@ -11,5 +11,10 @@
 
 Square::Square(int st8, int covernumber)
 {
+    state = st8;
+    if(st8 == 1)
+    {
+        IfCoveredNumber = covernumber;
+    }
     
 }

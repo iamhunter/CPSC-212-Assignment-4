@@ -12,6 +12,6 @@ public:
     Square(int st8, int covernumber);
     
 private:
-    int state;
+    int state; // 0 = open, 1 = covered, 2 = forbidden
     int IfCoveredNumber;
 };

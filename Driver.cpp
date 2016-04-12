@@ -7,10 +7,10 @@
 //
 
 #include <stdio.h>
-#include "Square.h"
-#include "Configuration.h"
+#include "Square.cpp"
 
 int main ()
 {
+    Square P(2, 3);
     
 }
