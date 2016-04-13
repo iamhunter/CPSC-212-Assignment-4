@@ -7,7 +7,11 @@
 //
 
 #include <stdio.h>
+#include <iostream>
+#include <string>
 #include "Configuration.h"
+
+using namespace std;
 
 
 
@@ -20,17 +24,28 @@ Configuration::Configuration(int rr, int cc)
         board[i] = *new Square*[cc];
     }
     
+    rows = rr;
+    cols = cc;
+    
 }
 bool Configuration::placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength)
 {
     return true;
 }
-void Configuration::forbit(int r, int c)
+void Configuration::forbid(int r, int c)
 {
     
 }
 void Configuration::dumpToScreen( ) const
 {
+    for(int a = 0; a < rows; a++)
+    {
+        for(int b = 0; b < cols; b++)
+        {
+            cout << 'X';
+        }
+        cout << endl;
+    }
     
 }
 

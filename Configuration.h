@@ -14,11 +14,11 @@ class Configuration
 public:
     Configuration(int rr, int cc);
     bool placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength);
-    void forbit(int r, int c);
+    void forbid(int r, int c);
     void dumpToScreen( ) const;
     
 private:
     int rows, cols;
     Square **board;
-    int countOfTiles;
+    //int countOfTiles;
 };

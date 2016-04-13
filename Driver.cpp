@@ -13,5 +13,7 @@
 int main ()
 {
     Square P(2, 3);
+    Configuration C(5,10);
+    C.dumpToScreen();
     
 }
