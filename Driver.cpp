@@ -12,9 +12,16 @@
 
 int main ()
 {
-    Square P(2, 3);
-    Configuration C(5,10);
-    C.forbid(2,3);
+    //Square P(2, 3);
+    
+    int x, y;
+
+    cout << "Enter number of rows ands cols for board:";
+    cin >> x >> y;
+    Configuration C(x,y);
+    cout << "Enter forbiden square:";
+    cin >> x >> y;
+    C.forbid(x,y);
 
     
     
