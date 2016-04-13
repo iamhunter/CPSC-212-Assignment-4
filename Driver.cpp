@@ -27,6 +27,7 @@ int main ()
     Configuration C(4,5);
     C.forbid(2,4);
     C.placeTileAt(1,1,true,3);
+    C.placeTileAt(2,2,false,2);
     
     
     C.dumpToScreen();
