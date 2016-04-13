@@ -34,7 +34,7 @@ bool Configuration::placeTileAt(int rStart, int cStart, bool isHorizontal, int t
 }
 void Configuration::forbid(int r, int c)
 {
-    board[r][c].state = 2;
+    board[r-1][c-1].state = 2;
 }
 void Configuration::dumpToScreen( ) const
 {
