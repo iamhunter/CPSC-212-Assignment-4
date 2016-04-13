@@ -13,9 +13,9 @@ public:
     Square(int stupid);
     Square();
     int state; // 0 = open, 1 = covered, 2 = forbidden
+    int IfCoveredNumber;
+
 
 
     
-private:
-    int IfCoveredNumber;
 };

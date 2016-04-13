@@ -20,5 +20,5 @@ public:
 private:
     int rows, cols;
     Square **board;
-    //int countOfTiles;
+    int countOfTiles;
 };

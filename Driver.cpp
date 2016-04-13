@@ -14,7 +14,7 @@ int main ()
 {
     //Square P(2, 3);
     
-    int x, y;
+    /*int x, y;
 
     cout << "Enter number of rows ands cols for board:";
     cin >> x >> y;
@@ -22,7 +22,11 @@ int main ()
     cout << "Enter forbiden square:";
     cin >> x >> y;
     C.forbid(x,y);
-
+*/
+    
+    Configuration C(4,5);
+    C.forbid(2,4);
+    C.placeTileAt(1,1,true,3);
     
     
     C.dumpToScreen();

@@ -26,16 +26,38 @@ Configuration::Configuration(int rr, int cc)
     
     rows = rr;
     cols = cc;
+    countOfTiles = 1;
     
 }
+
+
 bool Configuration::placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength)
 {
+    if(isHorizontal){
+        for(int a = 0; a < tileLength; a++)
+        {
+            board[rStart-1][cStart+a-1].state = 1;
+            board[rStart-1][cStart+a-1].IfCoveredNumber = countOfTiles;
+            
+        }
+            
+    }
+    else{
+        
+    }
+    
+    
+    countOfTiles++;
     return true;
 }
+
+
 void Configuration::forbid(int r, int c)
 {
     board[r-1][c-1].state = 2;
 }
+
+
 void Configuration::dumpToScreen( ) const
 {
     for(int a = 0; a < rows; a++)
@@ -46,7 +68,7 @@ void Configuration::dumpToScreen( ) const
                 cout << '.';
             }
             else if(board[a][b].state == 1){
-                
+                cout << board[a][b].IfCoveredNumber;
             }
             else if(board[a][b].state == 2){
                 cout << 'X';
@@ -54,13 +76,4 @@ void Configuration::dumpToScreen( ) const
         }
         cout << endl;
     }
-    
 }
-
-
-/*
-private:
-int rows, cols;
-Square **board;
-int countOfTiles;
-*/
