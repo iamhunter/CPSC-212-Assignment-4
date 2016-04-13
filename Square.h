@@ -10,8 +10,12 @@ class Square
 {
 public:
     Square(int st8, int covernumber);
+    Square(int stupid);
+    Square();
+    int state; // 0 = open, 1 = covered, 2 = forbidden
+
+
     
 private:
-    int state; // 0 = open, 1 = covered, 2 = forbidden
     int IfCoveredNumber;
 };

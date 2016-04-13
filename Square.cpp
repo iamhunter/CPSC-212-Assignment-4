@@ -18,3 +18,13 @@ Square::Square(int st8, int covernumber)
     }
     
 }
+
+Square::Square(int stupid)
+{
+    state = 0;
+}
+
+Square::Square()
+{
+    state = 0;
+}

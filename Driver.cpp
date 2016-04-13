@@ -14,6 +14,10 @@ int main ()
 {
     Square P(2, 3);
     Configuration C(5,10);
+    C.forbid(2,3);
+
+    
+    
     C.dumpToScreen();
     
 }

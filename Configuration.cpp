@@ -21,7 +21,7 @@ Configuration::Configuration(int rr, int cc)
     board = new Square*[rr];
     for(int i = 0; i<rr; i++)
     {
-        board[i] = *new Square*[cc];
+        board[i] = new Square[cc];
     }
     
     rows = rr;
@@ -34,7 +34,7 @@ bool Configuration::placeTileAt(int rStart, int cStart, bool isHorizontal, int t
 }
 void Configuration::forbid(int r, int c)
 {
-    
+    board[r][c].state = 2;
 }
 void Configuration::dumpToScreen( ) const
 {
@@ -42,7 +42,15 @@ void Configuration::dumpToScreen( ) const
     {
         for(int b = 0; b < cols; b++)
         {
-            cout << 'X';
+            if(board[a][b].state == 0){
+                cout << '.';
+            }
+            else if(board[a][b].state == 1){
+                
+            }
+            else if(board[a][b].state == 2){
+                cout << 'X';
+            }
         }
         cout << endl;
     }
