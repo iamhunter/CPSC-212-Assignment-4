@@ -6,6 +6,20 @@
 //
 //
 
+using namespace std;
+
+#include <string>
+
+
+class Placement{
+    int row, column, tileLength;
+    bool isHorizontal;
+};
+
+template <class T>
+class list{
+    
+};
 
 class Configuration
 {
@@ -25,8 +39,12 @@ private:
     int countOfTiles;
 };
 
-Class Placement
+
+
+
+/*
+class Placement
 {
 public:
-    
-};
+    list<
+};*/
