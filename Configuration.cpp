@@ -82,3 +82,8 @@ void Configuration::dumpToScreen( ) const
         cout << endl;
     }
 }
+
+list<Placement> Configuration::getPossiblePlacements(int tileLength)
+{
+    return tilesOnBoard;
+}

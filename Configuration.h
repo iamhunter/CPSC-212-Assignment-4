@@ -9,17 +9,15 @@
 using namespace std;
 
 #include <string>
+#include <list>
 
 
 class Placement{
-    int row, column, tileLength;
-    bool isHorizontal;
+    //int row, column, tileLength;
+    //bool isHorizontal;
 };
 
-template <class T>
-class list{
-    
-};
+
 
 class Configuration
 {
@@ -29,7 +27,6 @@ public:
     bool placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength);
     void forbid(int r, int c);
     void dumpToScreen( ) const;
-    list<Placement> tilesOnBoard;
     list<Placement> getPossiblePlacements(int tileLength);
     
     
@@ -37,6 +34,8 @@ private:
     int rows, cols;
     Square **board;
     int countOfTiles;
+    list<Placement> tilesOnBoard;
+
 };
 
 
