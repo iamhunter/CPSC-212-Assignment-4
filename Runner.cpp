@@ -28,7 +28,7 @@ int main ()
     C.forbid(2,4);
     C.placeTileAt(1,1,true,3);
     C.placeTileAt(2,2,false,2);
-    list<Placement> canDo = C.getPossiblePlacements(2);
+    list<Placement> canDo = C.getPossiblePlacements(3);
     for( Placement P : canDo ) cout << P << endl;
     
     

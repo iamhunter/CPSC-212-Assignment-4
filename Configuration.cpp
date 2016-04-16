@@ -112,7 +112,28 @@ list<Placement> Configuration::getPossiblePlacements(int tileLength)
     }
     
     //Vertical
-    
+    for(int a = 0; a < rows-tileLength+1; a++)
+    {
+        for(int b = 0; b < cols; b++)
+        {
+            for(int c = 0; c < tileLength; c++)
+            {
+                if(board[a+c][b].state == 0)
+                    tempcounter++;
+            }
+            if(tempcounter == tileLength)
+            {
+                tempPlacement.row = a+1;
+                tempPlacement.column = b+1;
+                tempPlacement.tileLength = tileLength;
+                tempPlacement.isHorizontal = false;
+                
+                tilesOnBoard.push_back(tempPlacement);
+                
+            }
+            tempcounter = 0;
+        }
+    }
     
     
     return tilesOnBoard;
