@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include <list>
 #include "Configuration.h"
 
 using namespace std;
@@ -85,5 +86,12 @@ void Configuration::dumpToScreen( ) const
 
 list<Placement> Configuration::getPossiblePlacements(int tileLength)
 {
+
+    tempPlacement.row = 1;
+    tempPlacement.column = 1;
+    tempPlacement.tileLength = 1;
+    tempPlacement.isHorizontal = true;
+    
+    
     return tilesOnBoard;
 }

@@ -13,8 +13,9 @@ using namespace std;
 
 
 class Placement{
-    //int row, column, tileLength;
-    //bool isHorizontal;
+public:
+    int row, column, tileLength;
+    bool isHorizontal;
 };
 
 
@@ -35,15 +36,6 @@ private:
     Square **board;
     int countOfTiles;
     list<Placement> tilesOnBoard;
+    Placement tempPlacement;
 
 };
-
-
-
-
-/*
-class Placement
-{
-public:
-    list<
-};*/
