@@ -86,21 +86,39 @@ void Configuration::dumpToScreen( ) const
 
 list<Placement> Configuration::getPossiblePlacements(int tileLength)
 {
-
-    tempPlacement.row = 1;
-    tempPlacement.column = 1;
-    tempPlacement.tileLength = 1;
-    tempPlacement.isHorizontal = true;
+    int tempcounter = 0;
     
-    tilesOnBoard.push_back(tempPlacement);
+    for(int a = 0; a < rows; a++)
+    {
+        for(int b = 0; b < cols; b++)
+        {
+            for(int c = 0; c < tileLength; c++)
+            {
+                if(board[a][b].state == 0)
+                    tempcounter++;
+            }
+            if(tempcounter == tileLength)
+            {
+                tempPlacement.row = a+1;
+                tempPlacement.column = b+1;
+                tempPlacement.tileLength = tileLength;
+                tempPlacement.isHorizontal = true;
+                
+                tilesOnBoard.push_back(tempPlacement);
+
+            }
+            tempcounter = 0;
+        }
+    }
+    
     
     
     return tilesOnBoard;
 }
 
-ostream &operator<<(ostream &out, const Placement& place)
+ostream &operator<<(ostream &out, const Placement& P)
 {
-    out << "POOPIE";
+    out << "uplft=" << '('<< P.row << ',' << P.column << ')' << ' ' << P.isHorizontal << " len=" << P.tileLength;
     return out;
 }
 
