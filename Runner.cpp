@@ -36,6 +36,6 @@ int main ()
     
     Configuration F("tileTest.txt");
 
-    
+    F.dumpToScreen();
     
 }

@@ -35,11 +35,6 @@ Configuration::Configuration(int rr, int cc)
 
 Configuration::Configuration(string fileName){
     
-    int tempcounter = 0;
-    string input;
-
-    float a;
-    string line;
     ifstream file;
     file.open (fileName);
 
@@ -53,8 +48,22 @@ Configuration::Configuration(string fileName){
         file >> cols;
     }
     
-
+    for(int i = 2; i < 3; i++)
+    {
+        file >> emptySpace;
+    }
     
+    for(int i = 3; i < 4; i++)
+    {
+        file >> forbidSpace;
+    }
+    
+
+    board = new Square*[rows];
+    for(int i = 0; i<rows; i++)
+    {
+        board[i] = new Square[cols];
+    }
 
     
 }
@@ -142,13 +151,13 @@ void Configuration::dumpToScreen( ) const
         for(int b = 0; b < cols; b++)
         {
             if(board[a][b].state == 0){
-                cout << '.';
+                cout << emptySpace;
             }
             else if(board[a][b].state == 1){
                 cout << board[a][b].IfCoveredNumber;
             }
             else if(board[a][b].state == 2){
-                cout << 'X';
+                cout << forbidSpace;
             }
         }
         cout << endl;

@@ -32,6 +32,8 @@ public:
     
     
 private:
+    char emptySpace = '.';
+    char forbidSpace = 'X';
     int rows, cols;
     Square **board;
     int countOfTiles;
