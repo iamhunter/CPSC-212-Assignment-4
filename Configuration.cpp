@@ -92,6 +92,15 @@ list<Placement> Configuration::getPossiblePlacements(int tileLength)
     tempPlacement.tileLength = 1;
     tempPlacement.isHorizontal = true;
     
+    tilesOnBoard.push_back(tempPlacement);
+    
     
     return tilesOnBoard;
 }
+
+ostream &operator<<(ostream &out, const Placement& place)
+{
+    out << "POOPIE";
+    return out;
+}
+

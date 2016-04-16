@@ -37,5 +37,8 @@ private:
     int countOfTiles;
     list<Placement> tilesOnBoard;
     Placement tempPlacement;
+    
+    friend ostream &operator<<(ostream &os, const Placement& place);
+    
 
 };
