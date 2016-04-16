@@ -87,14 +87,14 @@ void Configuration::dumpToScreen( ) const
 list<Placement> Configuration::getPossiblePlacements(int tileLength)
 {
     int tempcounter = 0;
-    
+    //Horizontal
     for(int a = 0; a < rows; a++)
     {
-        for(int b = 0; b < cols; b++)
+        for(int b = 0; b < cols-tileLength+1; b++)
         {
             for(int c = 0; c < tileLength; c++)
             {
-                if(board[a][b].state == 0)
+                if(board[a][b+c].state == 0)
                     tempcounter++;
             }
             if(tempcounter == tileLength)
@@ -110,6 +110,8 @@ list<Placement> Configuration::getPossiblePlacements(int tileLength)
             tempcounter = 0;
         }
     }
+    
+    //Vertical
     
     
     
