@@ -34,7 +34,7 @@ int main ()
     
     C.dumpToScreen();
     
-    Configuration F("tileTest.txt");
+    Configuration F("betterTest.txt");
 
     F.dumpToScreen();
     

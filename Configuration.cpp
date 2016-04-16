@@ -66,6 +66,32 @@ Configuration::Configuration(string fileName){
     }
 
     
+    char spaces[rows*cols];
+    int spacesCounter = 0;
+    
+    for(int a = 4; a < rows*cols + 4; a++)
+    {
+        file >> spaces[spacesCounter];
+        spacesCounter++;
+    }
+
+    spacesCounter = 0;
+    
+    for(int a  = 0; a < rows; a++)
+    {
+        for(int b = 0; b < cols; b++)
+        {
+            if(spaces[spacesCounter] == forbidSpace)
+            {
+                board[a][b].state = 2;
+            }
+            else{
+                board[a][b].state = 0;
+            }
+            
+            spacesCounter++;
+        }
+    }
 }
 
 
