@@ -10,6 +10,8 @@
 #include <iostream>
 #include <string>
 #include <list>
+#include <fstream>
+#include <string>
 #include "Configuration.h"
 
 using namespace std;
@@ -30,6 +32,33 @@ Configuration::Configuration(int rr, int cc)
     countOfTiles = 1;
     
 }
+
+Configuration::Configuration(string fileName){
+    
+    int tempcounter = 0;
+    string input;
+
+    float a;
+    string line;
+    ifstream file;
+    file.open (fileName);
+
+    for(int i = 0; i < 1; i++)
+    {
+        file >> rows;
+    }
+    
+    for (int i = 1; i < 2; i++)
+    {
+        file >> cols;
+    }
+    
+
+    
+
+    
+}
+
 
 
 bool Configuration::placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength)
