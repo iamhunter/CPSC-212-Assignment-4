@@ -6,6 +6,7 @@
 //
 //
 
+#include <iostream>
 #include <stdio.h>
 #include "Square.cpp"
 #include "Configuration.cpp"
