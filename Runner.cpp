@@ -32,6 +32,7 @@ int main ()
     list<Placement> canDo = C.getPossiblePlacements(3);
     for( Placement P : canDo ) cout << P << endl;
     
+    C.setChars('-', '+');
     C.dumpToScreen();
     
     Configuration F("betterTest.txt");

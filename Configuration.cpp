@@ -245,6 +245,12 @@ list<Placement> Configuration::getPossiblePlacements(int tileLength)
     return tilesOnBoard;
 }
 
+void Configuration::setChars(char a, char b)
+{
+    emptySpace = a;
+    forbidSpace = b;
+}
+
 ostream &operator<<(ostream &out, const Placement& P)
 {
     out << "uplft=" << '('<< P.row << ',' << P.column << ')' << ' ' << P.isHorizontal << " len=" << P.tileLength;

@@ -29,6 +29,7 @@ public:
     void forbid(int r, int c);
     void dumpToScreen( ) const;
     list<Placement> getPossiblePlacements(int tileLength);
+    void setChars(char a, char b);
     
     
 private:
