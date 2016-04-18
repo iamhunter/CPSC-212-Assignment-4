@@ -94,6 +94,7 @@ Configuration::Configuration(string fileName){
             spacesCounter++;
         }
     }
+    countOfTiles = 1;
     countOfLetters = 'A';
 
 }

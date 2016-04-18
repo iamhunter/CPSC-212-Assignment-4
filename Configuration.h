@@ -31,11 +31,6 @@ public:
     list<Placement> getPossiblePlacements(int tileLength);
     void setChars(char a, char b);
     int rows, cols;
-
-
-    
-    
-private:
     char emptySpace = '.';
     char forbidSpace = 'X';
     Square **board;
@@ -43,6 +38,12 @@ private:
     char countOfLetters;
     list<Placement> tilesOnBoard;
     Placement tempPlacement;
+
+
+    
+    
+private:
+
     
     friend ostream &operator<<(ostream &os, const Placement& place);
 
