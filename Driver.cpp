@@ -42,7 +42,7 @@ int main ()
     
     Filler F("tileTest.txt");
     
-    F.greedyFill(1);
+    F.greedyFill(5);
 
     
     F.dumpToScreen();

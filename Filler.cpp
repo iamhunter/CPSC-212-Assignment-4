@@ -15,8 +15,15 @@ void Filler::greedyFill(int tileLength)
         for(int b = 1; b <= cols; b++)
         {
             placeTileAtFiller(a,b,true,tileLength);
-            placeTileAtFiller(a,b,false,tileLength);
 
+        }
+    }
+    for(int a = 1; a <= cols; a++)
+    {
+        for(int b = 1; b <= rows; b++)
+        {
+            placeTileAtFiller(a,b,false,tileLength);
+            
         }
     }
 }
