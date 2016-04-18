@@ -42,7 +42,14 @@ int main ()
     
     Filler F("tileTest.txt");
     
+    F.greedyFill(1);
+
+    
     F.dumpToScreen();
+    
+    char testchar = 'A';
+    testchar++;
+    cout << testchar;
     
     
     

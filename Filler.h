@@ -17,4 +17,7 @@ public:
     Filler(string fileName) : Configuration(fileName){};
     void greedyFill(int tileLength);
     void betterFill(int tileLength);
+    bool placeTileAtFiller(int rStart, int cStart, bool isHorizontal, int tileLength);
+
+    
 };

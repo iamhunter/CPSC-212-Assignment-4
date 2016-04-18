@@ -31,6 +31,7 @@ Configuration::Configuration(int rr, int cc)
     rows = rr;
     cols = cc;
     countOfTiles = 1;
+    countOfLetters = 'A';
     
 }
 
@@ -93,6 +94,8 @@ Configuration::Configuration(string fileName){
             spacesCounter++;
         }
     }
+    countOfLetters = 'A';
+
 }
 
 
@@ -171,7 +174,7 @@ void Configuration::forbid(int r, int c)
 }
 
 
-void Configuration::dumpToScreen( ) const
+void Configuration::dumpToScreen( )
 {
     for(int a = 0; a < rows; a++)
     {
@@ -181,7 +184,16 @@ void Configuration::dumpToScreen( ) const
                 cout << emptySpace;
             }
             else if(board[a][b].state == 1){
-                cout << board[a][b].IfCoveredNumber;
+                
+                if(board[a][b].IfCoveredNumber < 10)
+                {
+                    cout << board[a][b].IfCoveredNumber;
+                }
+                else{
+                    cout << countOfLetters;
+                    countOfLetters++;
+                    
+                }
             }
             else if(board[a][b].state == 2){
                 cout << forbidSpace;

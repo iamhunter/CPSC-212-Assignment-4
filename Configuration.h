@@ -27,18 +27,20 @@ public:
     Configuration(string fileName);
     bool placeTileAt(int rStart, int cStart, bool isHorizontal, int tileLength);
     void forbid(int r, int c);
-    void dumpToScreen( ) const;
+    void dumpToScreen( );
     list<Placement> getPossiblePlacements(int tileLength);
     void setChars(char a, char b);
+    int rows, cols;
+
 
     
     
 private:
     char emptySpace = '.';
     char forbidSpace = 'X';
-    int rows, cols;
     Square **board;
     int countOfTiles;
+    char countOfLetters;
     list<Placement> tilesOnBoard;
     Placement tempPlacement;
     
