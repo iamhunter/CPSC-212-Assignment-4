@@ -28,6 +28,26 @@ void Filler::greedyFill(int tileLength)
     }
 }
 
+void Filler::betterFill(int tileLength)
+{
+    for(int a = 1; a <= rows; a++)
+    {
+        for(int b = 1; b <= cols; b++)
+        {
+            placeTileAtFiller(a,b,false,tileLength);
+            
+        }
+    }
+    for(int a = 1; a <= cols; a++)
+    {
+        for(int b = 1; b <= rows; b++)
+        {
+            placeTileAtFiller(a,b,true,tileLength);
+            
+        }
+    }
+}
+
 bool Filler::placeTileAtFiller(int rStart, int cStart, bool isHorizontal, int tileLength)
 {
     if(rStart <= 0 || cStart <= 0)
