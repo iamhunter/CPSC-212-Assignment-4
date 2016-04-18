@@ -13,4 +13,8 @@
 class Filler : public Configuration
 {
     
+public:
+    Filler(string fileName) : Configuration(fileName){};
+    void greedyFill(int tileLength);
+    void betterFill(int tileLength);
 };

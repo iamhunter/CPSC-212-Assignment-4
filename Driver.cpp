@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "Square.cpp"
 #include "Configuration.cpp"
+#include "Filler.cpp"
 
 int main ()
 {
@@ -35,8 +36,14 @@ int main ()
     C.setChars('-', '+');
     C.dumpToScreen();
     
-    Configuration F("betterTest.txt");
+    Configuration Z("betterTest.txt");
 
+    Z.dumpToScreen();
+    
+    Filler F("tileTest.txt");
+    
     F.dumpToScreen();
+    
+    
     
 }
