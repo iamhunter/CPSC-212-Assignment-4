@@ -30,6 +30,7 @@ public:
     void dumpToScreen( ) const;
     list<Placement> getPossiblePlacements(int tileLength);
     void setChars(char a, char b);
+
     
     
 private:
@@ -42,6 +43,8 @@ private:
     Placement tempPlacement;
     
     friend ostream &operator<<(ostream &os, const Placement& place);
+
+    
     
 
 };
